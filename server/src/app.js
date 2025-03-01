@@ -4,13 +4,13 @@ const planetsRouter = require("./routes/planets/planets.router");
 
 const app = express();
 
-// app.use(cors()); //allow all to acess all sites
+app.use(cors()); //allow all to acess all sites
 
-app.use(
-  cors({
-    origin: "http://localhost:8000",
-  })
-); // for specific origin
+// app.use(
+//   cors({
+//     origin: "http://localhost:8000",
+//   })
+// ); // for specific origin
 
 app.use(express.json());
 app.use(planetsRouter);
